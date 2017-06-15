@@ -271,25 +271,35 @@
 				font-size: 13px;
 			}
 		}
-		.shipin{
-			width: 500px;
+		
+		.shipin {
+			width: 90vw;
+			/*height: 400px;*/
 			margin: 0 auto;
 		}
-		h1{
+		
+		h1 {
 			text-align: center;
 			color: coral;
 		}
-		video{
+		
+		video {
 			width: 500px;
 			height: 300px;
 			margin: 0 auto;
 		}
-		button{
-		    float: left;
+		
+		button {
+			float: left;
 			width: 33vw;
 			height: 8vh;
 			text-align: center;
 			margin: 0;
+		}
+		.vaa{
+			width: 500px;
+			height: 300px;
+			margin: 0 auto;
 		}
 	</style>
 
@@ -300,10 +310,12 @@
 	<nva>
 		<h1>我们曾经回忆过</h1>
 	</nva>
-	
+	<div class="vaa">
+		<video controls autoplay src='' id='vide' webkit-playsinline='true'></video>
+	</div>
 	<div id='va' class="shipin">
-		<video  controls src='' id='vide'>
-		</video>
+
+
 
 	</div>
 	<ul id="hexGrid">
@@ -337,8 +349,8 @@
 
 		//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~视频~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~！！
 		var arrV = [
-			
-			
+
+
 			{
 				src: 'http://211.142.194.141/ws.acgvideo.com/3/4e/7610480-1.mp4?wsTime=1497498958&platform=html5&wsSecret2=3d21a78e6a4c4300ef39ec6b5ff7b74d&oi=1973341032&rate=110&wshc_tag=0&wsts_tag=5941f090&wsid_tag=759ecb68&wsiphost=ipdbm',
 				name: '白金区攻城'
@@ -363,7 +375,7 @@
 				src: 'http://211.142.197.29/ws.acgvideo.com/f/b8/15563661-1.mp4?wsTime=1497500884&platform=html5&wsSecret2=7ed54f60f92f9b68298b121e99d1fcda&oi=1973341032&rate=110&wshc_tag=0&wsts_tag=5941f7c0&wsid_tag=759ecb68&wsiphost=ipdbm',
 				name: '热血传奇宣传'
 			},
-			
+
 			{
 				src: "http://111.6.185.72/ws.acgvideo.com/0/a2/6958539-1.mp4?wsTime=1497501824&platform=html5&wsSecret2=f12313d92701efd2e1d2c4e892cbce64&oi=1973341032&rate=110&wshc_tag=0&wsts_tag=5941fce7&wsid_tag=759ecb68&wsiphost=ipdbm",
 				name: '沙画沙巴克'
@@ -381,21 +393,19 @@
 				name: '热血重演'
 			}
 		]
-		var vide=document.getElementById('vide')
-		var va=document.getElementById('va')//视频所在的DIV
-		for(var a=0;a<arrV.length;a++){
-			var but=document.createElement('button')
+		var vide = document.getElementById('vide')
+		var va = document.getElementById('va')//视频所在的DIV
+		for (var a = 0; a < arrV.length; a++) {
+			var but = document.createElement('button')
 			va.appendChild(but)
-			but.innerText=arrV[a].name
-			but.dataset.src=arrV[a].src
-		    but.onclick=function(e){
-				var target = e.currentTarget 
+			but.innerText = arrV[a].name
+			but.dataset.src = arrV[a].src
+			but.onclick = function (e) {
+				var target = e.currentTarget
 				console.log(target.dataset.src)
-				vide.src=target.dataset.src
+				vide.src = target.dataset.src
 			}
 		}
-		
-	
 	</script>
 </body>
 
