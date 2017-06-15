@@ -13,7 +13,7 @@
 		}
 		
 		body {
-			background: lightblue;
+			background: black;
 		}
 		
 		#hexGrid {
@@ -38,7 +38,6 @@
 			overflow: hidden;
 			visibility: hidden;
 			outline: 1px solid transparent;
-
 			-webkit-transform: rotate(-60deg) skewY(30deg) translatez(-1px);
 			-ms-transform: rotate(-60deg) skewY(30deg) translatez(-1px);
 			transform: rotate(-60deg) skewY(30deg) translatez(-1px);
@@ -48,7 +47,6 @@
 			position: absolute;
 			visibility: visible;
 			outline: 1px solid transparent;
-			
 		}
 		
 		.hexIn {
@@ -273,18 +271,37 @@
 				font-size: 13px;
 			}
 		}
+		.shipin{
+			width: 500px;
+			margin: 0 auto;
+		}
+		h1{
+			text-align: center;
+			color: coral;
+		}
 	</style>
 
 
 </head>
 
 <body>
+	<nva>
+		<h1>我们曾经回忆过</h1>
+	</nva>
+	<button></button>
+	<div id='va' class="shipin">
+		<video width="500px" height="200px" controls src='' id='vide'>
+		</video>
+
+	</div>
 	<ul id="hexGrid">
 
 
 	</ul>
 
+
 	<script>
+		//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~UL创建图片~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~！！
 		var arr = [
 			'http://a1.qpic.cn/psb?/V14S2YHb2S4C5J/i9TTdNccAI89as98zGWsZ5z1tWYGkml.Vc1pSEMw41Y!/b/dBcBAAAAAAAA&bo=4AGAAgAAAAARB1M!&rf=viewer_4&t=5',
 			'http://b160.photo.store.qq.com/psb?/V14S2YHb2S4C5J/DtZwcZZI2OUZktEPmjlJMlOdx9m4acMh7Un418bXPak!/b/dKAAAAAAAAAA&bo=SwKVAQAAAAAFAP4!&rf=viewer_4',
@@ -306,6 +323,67 @@
 		             </li>`
 		}
 
+		//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~视频~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~！！
+		var arrV = [
+			
+			
+			{
+				src: 'http://211.142.194.141/ws.acgvideo.com/3/4e/7610480-1.mp4?wsTime=1497498958&platform=html5&wsSecret2=3d21a78e6a4c4300ef39ec6b5ff7b74d&oi=1973341032&rate=110&wshc_tag=0&wsts_tag=5941f090&wsid_tag=759ecb68&wsiphost=ipdbm',
+				name: '白金区攻城'
+			},
+			{
+				src: 'http://111.6.185.66/ws.acgvideo.com/f/ba/16944142-1.mp4?wsTime=1497500054&platform=html5&wsSecret2=f7a31ee000c0e0a4ad4ddbe8291bba55&oi=1973341032&rate=110&wshc_tag=0&wsts_tag=5941f4d5&wsid_tag=759ecb68&wsiphost=ipdbm',
+				name: '热血传奇漫谈'
+			},
+			{
+				src: 'http://111.6.185.71/ws.acgvideo.com/2/d8/1044877-1.mp4?wsTime=1497499992&platform=html5&wsSecret2=c4fc2f8d888489f8a017b5b33b1d3b81&oi=1973341032&rate=110&wshc_tag=0&wsts_tag=5941f5c2&wsid_tag=759ecb68&wsiphost=ipdbm',
+				name: '热血传奇背景乐（一代人的经典回忆）'
+			},
+			{
+				src: 'http://211.142.194.139/ws.acgvideo.com/4/e7/2398706-1.mp4?wsTime=1497500569&platform=html5&wsSecret2=720d31a826371679a97ff50a88eef476&oi=1973341032&rate=110&wshc_tag=0&wsts_tag=5941f664&wsid_tag=759ecb68&wsiphost=ipdbm',
+				name: '一个跑单的故事'
+			},
+			{
+				src: 'http://111.6.185.79/ws.acgvideo.com/4/e2/16094184-1.mp4?wsTime=1497500666&platform=html5&wsSecret2=9c2018d60acc6e3cf3bb4788dabf1a4a&oi=1973341032&rate=110&wshc_tag=0&wsts_tag=5941f6e4&wsid_tag=759ecb68&wsiphost=ipdbm',
+				name: '配同名歌'
+			},
+			{
+				src: 'http://211.142.197.29/ws.acgvideo.com/f/b8/15563661-1.mp4?wsTime=1497500884&platform=html5&wsSecret2=7ed54f60f92f9b68298b121e99d1fcda&oi=1973341032&rate=110&wshc_tag=0&wsts_tag=5941f7c0&wsid_tag=759ecb68&wsiphost=ipdbm',
+				name: '热血传奇宣传'
+			},
+			
+			{
+				src: "http://111.6.185.72/ws.acgvideo.com/0/a2/6958539-1.mp4?wsTime=1497501824&platform=html5&wsSecret2=f12313d92701efd2e1d2c4e892cbce64&oi=1973341032&rate=110&wshc_tag=0&wsts_tag=5941fce7&wsid_tag=759ecb68&wsiphost=ipdbm",
+				name: '沙画沙巴克'
+			},
+			{
+				src: 'http://111.47.220.193/ws.acgvideo.com/2/3b/10499637-1.mp4?wsTime=1497502295&platform=html5&wsSecret2=6160442eaf03f966334f82d353f0effb&oi=1973341032&rate=110&wshc_tag=0&wsts_tag=5941febf&wsid_tag=759ecb68&wsiphost=ipdbm',
+				name: '怀旧宣传片'
+			},
+			{
+				src: 'http://111.6.185.59/ws.acgvideo.com/4/7b/2560383-1.mp4?wsTime=1497503613&platform=html5&wsSecret2=8666e2562e85ffc5c0d71a7784eeee41&oi=1973341032&rate=110&wshc_tag=0&wsts_tag=59420265&wsid_tag=759ecb68&wsiphost=ipdbm',
+				name: '回忆当年'
+			},
+			{
+				src: 'http://111.6.184.54/ws.acgvideo.com/e/e5/4303020-1.mp4?wsTime=1497504102&platform=html5&wsSecret2=a7f6eb9c44625322cdf3e862bdb7f19d&oi=1973341032&rate=110&wshc_tag=0&wsts_tag=5942044f&wsid_tag=759ecb68&wsiphost=ipdbm',
+				name: '热血重演'
+			}
+		]
+		var vide=document.getElementById('vide')
+		var va=document.getElementById('va')//视频所在的DIV
+		for(var a=0;a<arrV.length;a++){
+			var but=document.createElement('button')
+			va.appendChild(but)
+			but.innerText=arrV[a].name
+			but.dataset.src=arrV[a].src
+		    but.onclick=function(e){
+				var target = e.currentTarget 
+				console.log(target.dataset.src)
+				vide.src=target.dataset.src
+			}
+		}
+		
+	
 	</script>
 </body>
 
